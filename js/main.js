@@ -9,10 +9,14 @@ $(document).ready(function () {
             dataType: "json",
             contentType: "application/json",
             success: function (data) {
+                //console.log(data.sprites.other.home.front_default) // Imagen grande
+                //console.log(data.sprites.other.showdown.front_default) // Gif
+                //console.log(data.name)
                 // Actualizar imagen
                 $("#poke-image").html(`<img src="${data.sprites.other.home.front_default}" id="poke-img">`);
+                $("#poke-gif").html(`<img src="${data.sprites.other.showdown.front_default}" id="poke-anim">`);
 
-                // Actualizar otros datos
+                // Actualizar descripcion
                 $("#poke-name").text(data.name.toUpperCase());
                 $("#poke-id").text(data.id);
                 $("#poke-type").text(data.types.map(type => type.type.name).join(', '));

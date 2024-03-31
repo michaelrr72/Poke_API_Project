@@ -32,7 +32,22 @@ h3 {
 }
 
 #poke-img {
-    background : #ffffff;
+    background: #ffffff;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    border-radius: 10px;
+    padding: 20px;
     max-width: 250px;
     max-height: 250px;
+}
+
+#poke-anim {
+    background: #4fc6f5a4;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    border-radius: 10px;
+    padding: 20px;
+    height: 100px;
 }
