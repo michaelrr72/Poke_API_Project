@@ -1,27 +1,38 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-.card-header {
-    background-color: #d32f2f;
-    color: #fff;
-}
-
-.card-body {
-    background-color: #d3d3d3;
-}
-
-#pokemon-image {
+h3 {
     text-align: center;
 }
 
+.pokedex {
+    background-image: url("../images/pokebola-logo.png");
+    background-position: center;
+    background-size: auto;
+    background-color: #d32f2f;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.card-header {
+    background-color: #ffffffb0;
+}
+
+.card-body {
+    background-color: #ffffffe5;
+}
+
+.card-footer {
+    color: #f0f0f0;
+}
+
 #poke-img {
-    max-width: 200px;
-    max-height: 200px;
+    background : #ffffff;
+    max-width: 250px;
+    max-height: 250px;
 }

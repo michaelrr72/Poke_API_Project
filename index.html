@@ -17,34 +17,62 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <!-- Formulario con caja de texto y botón -->
-        <div class="card-header">
-            <div class="input-group">
-                <input type="text" class="form-control" id="txt-buscar" placeholder="Buscar Pokémon">
-                <div class="input-group-append">
-                    <button class="btn btn-warning" id="mi-boton">Buscar</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <div id="pokemon-image"></div> <!--Imagen del pokemon-->
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h2 id="pokemon-name"></h2>
-                        <p>Tipo: <span id="pokemon-type"></span></p>
-                        <p>Altura: <span id="pokemon-height"></span></p>
-                        <p>Peso: <span id="pokemon-weight"></span></p>
-                        <p>Habilidades: <span id="pokemon-abilities"></span></p>
+    <div class="container my-5">
+        <div class="pokedex card">
+            <div class="card-header">
+                <!-- Formulario con caja de texto y botón -->
+                <div class="input-group">
+                    <input type="text" class="form-control" id="txt-buscar" placeholder="Buscar Pokémon (Nombre/ID)">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning" id="mi-boton">Buscar</button>
                     </div>
                 </div>
             </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--Descripcion del pokemon-->
+                        <h4>Descripción:</h4>
+                        <dl>
+                            <dt class="col-sm-5">Tipo: </dt>
+                            <dd class="col-sm-7"><span id="poke-type"></span></dd>
+                            <dt class="col-sm-5">Altura: </dt>
+                            <dd class="col-sm-7"><span id="poke-height"></span></dd>
+                            <dt class="col-sm-5">Peso: </dt>
+                            <dd class="col-sm-7"><span id="poke-weight"></span></dd>
+                            <dt class="col-sm-5">Habilidades: </dt>
+                            <dd class="col-sm-7"><span id="poke-abilities"></span></span></dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Imagen del pokemon-->
+                        <div id="poke-image"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Estadisticas del pokemon-->
+                        <h4>Estadísticas:</h4>
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Estadística</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody id="poke-stats"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h3>
+                    <span id="poke-name">Nombre Pokémon</span>
+                    <small> N.º <span id="poke-id">0000</span></small>
+                </h3>
+            </div>
         </div>
-        <script src="js/main.js"></script>
+        <div id="error-message" class="alert alert-danger mt-3" style="display: none;"></div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
