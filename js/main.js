@@ -7,16 +7,16 @@ $(document).ready(function () {
             dataType: "json",
             contentType: "application/json",
             success: function (data) {
-                //console.log(data.sprites.other.home.front_default) // Imagen grande
-                //console.log(data.sprites.other.showdown.front_default) // Gif
-                // Crea un nuevo elemento de imagen
-                var imgElement = $('<img>', {
-                    src: data.sprites.other.home.front_default, // Ruta de la imagen
-                    width: '150px' // Tamaño de la imagen
-                });
-                //$("#pokemon-image").html(`<img src="${data.sprites.other.showdown.front_default}">`)
-                $("#pokemon-image").html(imgElement)
+                // Actualizar imagen
+                $("#pokemon-image").html(`<img src="${data.sprites.other.home.front_default}" id="poke-img">`);
+
+                // Actualizar otros datos
+                $("#pokemon-name").text(data.name.toUpperCase());
+                $("#pokemon-type").text(data.types.map(type => type.type.name).join(', '));
+                $("#pokemon-height").text(`${data.height / 10} m`);
+                $("#pokemon-weight").text(`${data.weight / 10} kg`);
+                $("#pokemon-abilities").text(data.abilities.map(ability => ability.ability.name).join(', '));
             }
-        })
-    })
-})
+        });
+    });
+});
