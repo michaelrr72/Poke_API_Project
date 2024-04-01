@@ -14,10 +14,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Añadir Artyom.js para reconocimiento de voz -->
+    <script src="js/build/artyom.window.js"></script>
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container my-2">
         <div class="pokedex card">
             <div class="card-header">
                 <!-- Formulario con caja de texto y botón -->
@@ -26,6 +28,8 @@
                     <div class="input-group-append">
                         <button class="btn btn-warning" id="mi-boton">Buscar</button>
                     </div>
+                    <button class="btn btn-success active" data-bs-toggle="button" autocomplete="off"
+                        aria-pressed="true" id="activar-voz">Activar reconocimiento de voz</button>
                 </div>
             </div>
             <div class="card-body">
