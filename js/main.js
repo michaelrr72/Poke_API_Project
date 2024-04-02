@@ -58,6 +58,7 @@ $(document).ready(function () {
                 smart: true,
                 action: (i, wildcard) => {
                     var pokemonName = wildcard.trim().toLowerCase();
+                    pokemonName = pokemonName.replace(/\.$/, ''); // Elimina el punto final si lo hay.
                     $("#txt-buscar").val(pokemonName);
                     $("#mi-boton").trigger("click");
                 }
